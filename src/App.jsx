@@ -60,7 +60,7 @@ function App() {
     try 
     {
       const response = await fetch(
-        `https://notesaver-csma-vaishu-1.onrender.com/notes/${editId}`,
+        `https://notesaver-csma-vaishu-1.onrender.com/notes/:editId`,
         {
           method: "PUT",
           headers: {
@@ -87,7 +87,7 @@ function App() {
   const deleteNote = async (id) => {
     try {
       const response = await fetch(
-        'https://notesaver-csma-vaishu-1.onrender.com/notes/${id}`,
+        'https://notesaver-csma-vaishu-1.onrender.com/notes/:id`,
         {
           method: "DELETE"
         }
