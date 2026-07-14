@@ -60,7 +60,7 @@ function App() {
     try 
     {
       const response = await fetch(
-        `https://notesaver-csma-vaishu-1.onrender.com/notes/:editId`,
+        `https://notesaver-csma-vaishu-1.onrender.com/notes/${editId}`,
         {
           method: "PUT",
           headers: {
