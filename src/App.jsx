@@ -85,24 +85,26 @@ function App() {
     }
   };
   const deleteNote = async (id) => {
-    try {
-      const response = await fetch(
-        'https://notesaver-csma-vaishu-1.onrender.com/notes/:id`,
-        {
-          method: "DELETE"
-        }
-      );
-      if (response.ok) {
-        alert("Note Deleted Successfully");
-        getNotes();
+  try {
+    const response = await fetch(
+      `https://notesaver-csma-vaishu-1.onrender.com/notes/${id}`,
+      {
+        method: "DELETE",
       }
-    } catch (error) {
-      console.log(error);
+    );
+
+    if (response.ok) {
+      alert("Note Deleted Successfully");
+      getNotes();
     }
-  };
-  useEffect(() => {
-    getNotes();
-  }, []);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+useEffect(() => {
+  getNotes();
+}, []);
   return (
     <div className="container">
       <div className="note-box">
